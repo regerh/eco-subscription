@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>골든키워드 연구소</title>
     <style>
-        /* 토스 스타일: 깔끔한 폰트와 넓은 여백 */
+        :root { --accent: #ffffff; }
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #f2f4f6; 
-            margin: 0; padding: 0; display: flex; justify-content: center;
+            background: radial-gradient(circle at top right, #1a1a1a, #000); 
+            color: white; font-family: 'Pretendard', sans-serif; 
+            margin: 0; padding: 40px 20px; line-height: 1.6; 
         }
-        .wrapper { width: 100%; max-width: 450px; background: white; min-height: 100vh; padding: 20px; box-sizing: border-box; }
-        h1 { font-size: 24px; color: #191f28; margin-top: 40px; }
-        .card { background: #ffffff; border-radius: 20px; padding: 24px; margin-bottom: 16px; border: 1px solid #e5e8eb; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
-        .btn { display: block; width: 100%; padding: 18px; background: #3182f6; color: white; text-align: center; border-radius: 16px; text-decoration: none; font-weight: bold; font-size: 16px; margin-top: 20px; }
+        .header { text-align: center; margin-bottom: 80px; }
+        .header h1 { font-size: 3.5rem; letter-spacing: -2px; margin-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; max-width: 1200px; margin: auto; }
+        
+        /* 세련된 카드 스타일 */
+        .card { 
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            padding: 40px; border-radius: 30px; 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card:hover { border-color: rgba(255, 255, 255, 0.5); transform: translateY(-10px); }
+        .badge { font-size: 0.8rem; color: #aaa; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; display: block; }
+        .cta-btn { 
+            display: inline-block; margin-top: 20px; padding: 12px 25px; 
+            background: white; color: black; border-radius: 12px; font-weight: bold; text-decoration: none; 
+        }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <h1>좁은 방, 더 넓게 쓰세요</h1>
-        <p style="color: #6b7684;">전문가가 엄선한 공간 활용 꿀템 3가지</p>
-        
+    <div class="header">
+        <h1>Essential Selection</h1>
+        <p style="color: #666;">당신의 일상을 재정의하는 스마트한 솔루션</p>
+    </div>
+    
+    <div class="grid">
         <div class="card">
-            <h3>문걸이 수납 선반</h3>
-            <p style="color: #4e5968;">문 뒤 공간을 100% 활용해 보세요.</p>
-            <a href="#" class="btn">알아보기</a>
+            <span class="badge">Efficiency</span>
+            <h2>데스크 셋업 솔루션</h2>
+            <p>업무 효율을 200% 올려주는 인체공학적 기기들입니다.</p>
+            <a href="#" class="cta-btn">리포트 보기</a>
         </div>
-
         <div class="card">
-            <h3>압축봉 다용도 행거</h3>
-            <p style="color: #4e5968;">못 없이 간편하게 벽면 수납 완성.</p>
-            <a href="#" class="btn">알아보기</a>
-        </div>
-
-        <div class="card">
-            <h3>침대 밑 수납함</h3>
-            <p style="color: #4e5968;">숨어있는 공간을 찾아드립니다.</p>
-            <a href="#" class="btn">알아보기</a>
+            <span class="badge">Well-being</span>
+            <h2>수면 케어 시스템</h2>
+            <p>질 좋은 수면은 다음 날의 생산성을 결정합니다.</p>
+            <a href="#" class="cta-btn">리포트 보기</a>
         </div>
     </div>
 </body>
