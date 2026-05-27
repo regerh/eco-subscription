@@ -2,49 +2,33 @@
 <html lang="ko">
 <head>
     <style>
-        :root { --accent: #ffffff; }
-        body { 
-            background: radial-gradient(circle at top right, #1a1a1a, #000); 
-            color: white; font-family: 'Pretendard', sans-serif; 
-            margin: 0; padding: 40px 20px; line-height: 1.6; 
-        }
-        .header { text-align: center; margin-bottom: 80px; }
-        .header h1 { font-size: 3.5rem; letter-spacing: -2px; margin-bottom: 10px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; max-width: 1200px; margin: auto; }
-        
-        /* 세련된 카드 스타일 */
-        .card { 
-            background: rgba(255, 255, 255, 0.03); 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
-            padding: 40px; border-radius: 30px; 
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .card:hover { border-color: rgba(255, 255, 255, 0.5); transform: translateY(-10px); }
-        .badge { font-size: 0.8rem; color: #aaa; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; display: block; }
-        .cta-btn { 
-            display: inline-block; margin-top: 20px; padding: 12px 25px; 
-            background: white; color: black; border-radius: 12px; font-weight: bold; text-decoration: none; 
-        }
+        body { background: #050505; color: #f5f5f7; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
+        .hero { padding: 80px 20px; text-align: center; }
+        h1 { font-size: 3.5rem; background: linear-gradient(to right, #fff, #888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; padding: 40px; max-width: 1000px; margin: auto; }
+        .card { background: #111; border: 1px solid #222; padding: 30px; border-radius: 20px; transition: 0.3s; }
+        .card:hover { border-color: #444; }
+        .price { color: #0071e3; font-weight: bold; margin-top: 10px; display: block; }
+        .cta { display: block; background: #0071e3; color: white; padding: 12px; border-radius: 10px; text-align: center; text-decoration: none; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Essential Selection</h1>
-        <p style="color: #666;">당신의 일상을 재정의하는 스마트한 솔루션</p>
+    <div class="hero">
+        <h1>Tech Radar</h1>
+        <p>당신의 삶을 바꿀 차세대 가전을 미리 만나보세요.</p>
     </div>
-    
     <div class="grid">
         <div class="card">
-            <span class="badge">Efficiency</span>
-            <h2>데스크 셋업 솔루션</h2>
-            <p>업무 효율을 200% 올려주는 인체공학적 기기들입니다.</p>
-            <a href="#" class="cta-btn">리포트 보기</a>
+            <h3>AI 로봇 청소기</h3>
+            <p>스스로 지도를 그리고 장애물을 피하는 스마트 청소의 정점.</p>
+            <span class="price">최저가 확인하기</span>
+            <a href="#" class="cta">구매 상세정보</a>
         </div>
         <div class="card">
-            <span class="badge">Well-being</span>
-            <h2>수면 케어 시스템</h2>
-            <p>질 좋은 수면은 다음 날의 생산성을 결정합니다.</p>
-            <a href="#" class="cta-btn">리포트 보기</a>
+            <h3>스마트 홈 허브</h3>
+            <p>음성 하나로 조명부터 온도까지, 집 전체를 컨트롤하세요.</p>
+            <span class="price">최저가 확인하기</span>
+            <a href="#" class="cta">구매 상세정보</a>
         </div>
     </div>
 </body>
